@@ -2,6 +2,7 @@ import react from "react";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
+
 export default function Layout({ children }) {
   return (
     <View style={{ flex: 1 }}>
