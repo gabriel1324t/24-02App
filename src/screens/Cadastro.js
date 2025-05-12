@@ -106,12 +106,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   button: {
-    backgroundColor: "red",
+    alignItems: "center",
+    backgroundColor: "pink",
     padding: 10,
     borderRadius: 20,
     height: 50,
     width: "50%",
-    alignItems: "center",
     fontSize: 58,
   },
 });
