@@ -11,6 +11,8 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { Button } from "react-native-web";
+import * as SecureStore from 'expo-secure-store';
+import { useNavigation} from "@react-navigation/native";
 
 export default function EventosScreen() {
   const [eventos, setEventos] = useState([]);
@@ -71,9 +73,15 @@ export default function EventosScreen() {
       console.log("Erro ao buscar ingressos", error.response);
     }
   }
-
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("CadastroEvento")
+        }}
+        >
+        <Text>Criar novo evento</Text></TouchableOpacity>
       <Text style={styles.title}>Eventos Disponíveis</Text>
       {loading ? (
         <ActivityIndicator size="large" color="violet" />
@@ -177,7 +185,7 @@ const styles = StyleSheet.create({
   },
   eventCard: {
     padding: 15,
-    backgroundColor: "#f1f1f1",
+    backgroundColor: "pink",
     marginBottom: 10,
     borderRadius: 8,
   },

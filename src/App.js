@@ -35,12 +35,16 @@ export default function App() {
           )}
         />
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="CadastroEvento" component={CadastroEvento} />
         <Stack.Screen name="CadastroOrganizador"component={CadastroOrganizador}/>
         <Stack.Screen name="CadastroIngresso" component={CadastroIngresso} />
         <Stack.Screen name="EventosScreen">{()=>(
           <Layout>
             <EventosScreen/>
+          </Layout>
+        )}</Stack.Screen>
+        <Stack.Screen name="CadastroEvento">{()=>(
+          <Layout>
+            <CadastroEvento/>
           </Layout>
         )}</Stack.Screen>
       </Stack.Navigator>
